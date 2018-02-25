@@ -23,17 +23,17 @@ etc.
 
 This is a simple update. It requires a "Map Service URL" that is accessible (without secure access) and shared publicly. I attempted to call a few different map services, see below for types and considerations (skip to c for the layer that worked). By default, this app accesses the layers in the map service regardless of number of layers. 
 
-a. This first option errored out when I ran the application. My assumption is that it is because it is calling a Map Service I created on a hosted on a secure platform. I tried to 'Add Item' to my ArcGIS Online and embed security credentials but it was still erroring out. (see this link)
+  a. This first option errored out when I ran the application. My assumption is that it is because it is calling a Map Service I created on a hosted on a secure platform. I tried to 'Add Item' to my ArcGIS Online and embed security credentials but it was still erroring out. (see this link)
 ```
 //url: "https://ec2-54-68-22-196.us-west-2.compute.amazonaws.com:6443/arcgis/rest/services/Murphy/graffiti_CostMap_StPaulMN_2015/MapServer"
 ```
 
-b. The Map Server called here is a result of publishing a Feature Layer on ArcGIS Online as a Tile Layer. However, there was an issue with visibility as the application ran successfully and acknowledged the layer in the provided Legend but did not show. 
+  b. The Map Server called here is a result of publishing a Feature Layer on ArcGIS Online as a Tile Layer. However, there was an issue with visibility as the application ran successfully and acknowledged the layer in the provided Legend but did not show. 
 
 ```
 url: "https://services3.arcgis.com/J1Locv0GPOt6yBRR/arcgis/rest/services/BTS_Reportings_Tile_Layer/MapServer"
 ```
-c. I ended up configuring the application with a Map Service hosted on ESRI sampleserver6. 
+  c. I ended up configuring the application with a Map Service hosted on ESRI sampleserver6. 
 ```
 url: "http://sampleserver6.arcgisonline.com/arcgis/rest/services/911CallsHotspot/MapServer"
 ```
@@ -72,8 +72,8 @@ Technically, this could be considered a substep of #3, however, I dubbed it is o
                         targetScale: 250000
                     }
 ```
-## Save your edits and re-run the app in AppStudio.
-In my example, I have adjusted the data that is displayed both the scale and viewpoint center. The app now show 911 calls in the Portalnd, OR area. 
+# Save your edits and re-run the app in AppStudio.
+In my example, I have adjusted the data that is displayed, the scale, and viewpoint center. The app now shows 911 calls in the Portalnd, OR area. 
 
 <img src= "images/911HotSpotsApp.png" width = "350">
 
