@@ -1,4 +1,4 @@
-# 504_ChangeSubLayerVIs
+# 504 ChangeSubLayerVisibility
 Simple Tutorial For Modifying Sample Code for AppStudio App. In this tuturial, I'll configure Changing SubLayer Visibility (Turning Layers in a Map Service On and Off).
 
 ## Select New App Button and Find the Change Sublayer Visibility app 
@@ -7,7 +7,7 @@ Begin by starting a New App on AppStudio for Desktop, Navigate to and Create the
 
 <img src= "images/arcgisAppStudio1.png" width = "500">
 
-## Updating Three Sections of the QT Code: Map Background, URL for MapServer, and Viewpoint parameters. These are indicated by the red arrows. 
+## Updating Three Sections of the QT Code: Map Background, URL for MapServer, and Viewpoint (center, scale, and spatialreference) parameters. These are indicated by the red arrows. 
 
 <img src= "images/qmlCodeSample.png" width = "500">
 
