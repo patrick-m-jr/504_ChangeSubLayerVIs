@@ -17,19 +17,21 @@ etc.
 
 ### 2. Updating "ArcGISMapImageLayer" Object
 
-This is a simple update. It requires a "Map Service URL" that is accessible (without secure access) and shared publicly. I attempted to call both Tile Layers as well as 
+This is a simple update. It requires a "Map Service URL" that is accessible (without secure access) and shared publicly. I attempted to call a few different map services, see below for types and considerations (skip to c for the layer that worked). By default, this app accesses the layers in the map service regardless of number of layers. 
 
-A step by step series of examples that tell you have to get a development env running
-
-
+a. This first option errored out when I ran the application. My assumption is that it is because it is calling a Map Service I created on a hosted on a secure platform. I tried to 'Add Item' to my ArcGIS Online and embed security credentials but it was still erroring out. (see this link)
 ```
-Give the example
+//url: "https://ec2-54-68-22-196.us-west-2.compute.amazonaws.com:6443/arcgis/rest/services/Murphy/graffiti_CostMap_StPaulMN_2015/MapServer"
 ```
 
-And repeat
+b. The Map Server called here is a result of publishing a Feature Layer on ArcGIS Online as a Tile Layer. However, there was an issue with visibility as the application ran successfully and acknowledged the layer in the provided Legend but did not show. 
 
 ```
-until finished
+url: "https://services3.arcgis.com/J1Locv0GPOt6yBRR/arcgis/rest/services/BTS_Reportings_Tile_Layer/MapServer"
+```
+c. I ended up configuring the application with a Map Service hosted on ESRI sampleserver6. 
+```
+url: "http://sampleserver6.arcgisonline.com/arcgis/rest/services/911CallsHotspot/MapServer"
 ```
 
 End with an example of getting some data out of the system or using it for a little demo
