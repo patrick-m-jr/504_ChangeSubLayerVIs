@@ -26,6 +26,8 @@ This is a simple update. It requires a "Map Service URL" that is accessible (wit
   a. This first option errored out when I ran the application. My assumption is that it is because it is calling a Map Service I created on a hosted on a secure platform. I tried to 'Add Item' to my ArcGIS Online and embed security credentials but it was still erroring out. (see this link)
 ```
 //url: "https://ec2-54-68-22-196.us-west-2.compute.amazonaws.com:6443/arcgis/rest/services/Murphy/graffiti_CostMap_StPaulMN_2015/MapServer"
+
+
 ```
 
   b. The Map Server called here is a result of publishing a Feature Layer on ArcGIS Online as a Tile Layer. However, there was an issue with visibility as the application ran successfully and acknowledged the layer in the provided Legend but did not show. 
@@ -67,6 +69,8 @@ Technically, this could be considered a substep of #3, however, I dubbed it is o
                             x: 7610000//6e6 //-11e6
                             //y moves up/down
                             y: 680000 //6e6
+                            
+        ***Don't forget to update the spatial reference to the map service being called. ***
                             spatialReference: SpatialReference {wkid: 102726}
                         }
                         targetScale: 250000
