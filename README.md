@@ -1,4 +1,4 @@
-# 504 ChangeSubLayerVisibility
+# ChangeSubLayerVisibility
 Simple Tutorial For Modifying Sample Code for AppStudio App. In this tuturial, I'll configure Changing SubLayer Visibility (Turning Layers in a Map Service On and Off).
 
 ## Select New App Button and Find the Change Sublayer Visibility app 
