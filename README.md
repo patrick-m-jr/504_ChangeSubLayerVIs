@@ -1,23 +1,26 @@
 # 504_ChangeSubLayerVIs
-Simple Tutorial For Modifying Sample Code for AppStudio App
+Simple Tutorial For Modifying Sample Code for AppStudio App. In this tuturial, I'll configure Changing SubLayer Visibility (Turning Layers in a Map Service On and Off)
 
 ## Select New App Button and Find the Change Sublayer Visibility app 
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Begin by starting a New App on AppStudio for Desktop, Navigate to and Create the "Change Sublayer Visibility", and Finally let's edit this in QT!
 
-### Prerequisites
+## Updating Three Sections of the QT Code: Map Background, URL for MapServer, and Viewpoint parameters. These are indicated by the red arrows. 
 
-What things you need to install the software and how to install them
+### 1. Basemap options: Update the basemap accordingly. A <a href = "https://developers.arcgis.com/qt/latest/qml/api-reference/qml-esri-arcgisruntime-basemap.html" target = "_blank"> list </a> of options can be found here. 
 
 ```
-Give examples
+BasemapTopographic
+BasemapDarkGrayCanvasVector
+etc.
 ```
 
-### Installing
+### 2. Updating "ArcGISMapImageLayer" Object
+
+This is a simple update. It requires a "Map Service URL" that is accessible (without secure access) and shared publicly. I attempted to call both Tile Layers as well as 
 
 A step by step series of examples that tell you have to get a development env running
 
-Say what the step will be
 
 ```
 Give the example
