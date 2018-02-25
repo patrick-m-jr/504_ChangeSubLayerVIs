@@ -36,53 +36,40 @@ url: "http://sampleserver6.arcgisonline.com/arcgis/rest/services/911CallsHotspot
 
 End with an example of getting some data out of the system or using it for a little demo
 
-## Running the tests
+### 3. Updating "initialViewpoint: ViewpointCenter" Coordinate and Target Scale parameters
 
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
+I updated this section of code so that the app opens centered on the location and subsequently the data. The format of the coordinates and targetScale can be condensed in scientific format where '11e6' == '11000000'
 
 ```
-Give an example
+                    initialViewpoint: ViewpointCenter {
+                        center: Point {
+                            //x moves left/right. 
+                            x: 7610000//6e6 //-11e6
+                            //y moves up/down
+                            y: 680000 //6e6
+                            spatialReference: SpatialReference {wkid: 102726}
+                        }
+                        targetScale: 250000
+                    }
 ```
+### 4. Updating "initialViewpoint: ViewpointCenter": Spatial Reference parameters
 
-### And coding style tests
-
-Explain what these tests test and why
+Technically, this could be considered a substep of #3, however, I dubbed it is own step because it's important to match coordinate systems. This map in particular used "NAD_1983_StatePlane_Oregon_North_FIPS_3601_Feet." Make sure that the Spatial Referene on your Map Service matches your map object.
 
 ```
-Give an example
-```
+                    initialViewpoint: ViewpointCenter {
+                        center: Point {
+                            //x moves left/right. 
+                            x: 7610000//6e6 //-11e6
+                            //y moves up/down
+                            y: 680000 //6e6
+                            spatialReference: SpatialReference {wkid: 102726}
+                        }
+                        targetScale: 250000
+                    }
 
-## Deployment
 
-Add additional notes about how to deploy this on a live system
 
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
 
