@@ -1,11 +1,15 @@
 # 504_ChangeSubLayerVIs
-Simple Tutorial For Modifying Sample Code for AppStudio App. In this tuturial, I'll configure Changing SubLayer Visibility (Turning Layers in a Map Service On and Off)
+Simple Tutorial For Modifying Sample Code for AppStudio App. In this tuturial, I'll configure Changing SubLayer Visibility (Turning Layers in a Map Service On and Off).
 
 ## Select New App Button and Find the Change Sublayer Visibility app 
 
 Begin by starting a New App on AppStudio for Desktop, Navigate to and Create the "Change Sublayer Visibility", and Finally let's edit this in QT!
 
+<img src= "images/arcgisAppStudio1.png" width = "500">
+
 ## Updating Three Sections of the QT Code: Map Background, URL for MapServer, and Viewpoint parameters. These are indicated by the red arrows. 
+
+<img src= "images/qmlCodeSample.png" width = "500">
 
 ### 1. Basemap options: Update the basemap accordingly. A <a href = "https://developers.arcgis.com/qt/latest/qml/api-reference/qml-esri-arcgisruntime-basemap.html" target = "_blank"> list </a> of options can be found here. 
 
@@ -33,8 +37,8 @@ c. I ended up configuring the application with a Map Service hosted on ESRI samp
 ```
 url: "http://sampleserver6.arcgisonline.com/arcgis/rest/services/911CallsHotspot/MapServer"
 ```
+<img src= "images/mapServerOptions.png" width = "500">
 
-End with an example of getting some data out of the system or using it for a little demo
 
 ### 3. Updating "initialViewpoint: ViewpointCenter" Coordinate and Target Scale parameters
 
@@ -67,7 +71,11 @@ Technically, this could be considered a substep of #3, however, I dubbed it is o
                         }
                         targetScale: 250000
                     }
+```
+## Save your edits and re-run the app in AppStudio.
+In my example, I have adjusted the data that is displayed both the scale and viewpoint center. The app now show 911 calls in the Portalnd, OR area. 
 
+<img src= "images/911HotSpotsApp.png" width = "350">
 
 
 
