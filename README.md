@@ -23,7 +23,7 @@ etc.
 
 This is a simple update. It requires a "Map Service URL" that is accessible (without secure access) and shared publicly. I attempted to call a few different map services, see below for types and considerations (skip to c for the layer that worked). By default, this app accesses the layers in the map service regardless of number of layers. 
 
-  a. This first option errored out when I ran the application. My assumption is that it is because it is calling a Map Service I created on a hosted on a secure platform. I tried to 'Add Item' to my ArcGIS Online and embed security credentials but it was still erroring out. (see this link)
+  a. This first option errored out when I ran the application. My assumption is that it is because it is calling a Map Service I created on a hosted on a secure platform. I tried to 'Add Item' to my ArcGIS Online and embed security credentials but it was still erroring out. (<a href="http://communityhub.esriuk.com/technicalsupport/2014/7/22/how-to-use-arcgis-server-services-in-arcgis-online.html" target="_blank">see this link</a>)
 ```
 //url: "https://ec2-54-68-22-196.us-west-2.compute.amazonaws.com:6443/arcgis/rest/services/Murphy/graffiti_CostMap_StPaulMN_2015/MapServer"
 
